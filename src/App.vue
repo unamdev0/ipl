@@ -1,28 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <div class="container-quiz">
+      <div class="quiz-header">
+        <h1>Welcome</h1>
+      </div>
+      <div class="main-quiz" v-for="index in 10" :key="index">
+        <div class="question-box">
+            <h1>question</h1>
+            <!-- <p>{{element.question}}</p> -->
+        </div>
+        <div class="options">
+          <ul>
+            <li>
+
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+
+      <div class="footer-quiz"></div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import json from './assets/data.json'
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  name: "App",
+  data(){
+    return{
+      questions:json.questions
+    }
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
