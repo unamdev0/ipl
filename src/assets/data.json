@@ -1,145 +1,191 @@
 {
   "questions": [
     {
-      "question": "Which Player has won the no. of Man of the Match awards?",
-      "correct": "Yuvraj Singh",
-      "type": 4
-    },
-    {
-      "question": "What is special about a chameleon?",
-
-      "correct": 0,
+      "question": "Who has the most man of the match awards in IPL?",
       "answers": [
-        "It changes color",
-        "It can live without food",
-        "It has no eyes",
-        "It can live without food and has no eyes",
-        "It can breath underwater and fly"
+        { "option": "Yuvraj Singh", "correct": false },
+        { "option": "MS Dhoni", "correct": false },
+        { "option": "BB McCullum", "correct": false },
+        { "option": "CH Gayle", "correct": true }
       ]
     },
     {
-      "question": "Michael Jordan's nicknames?",
-      "caption": "Mark all that apply",
-      "type": "checkbox",
-      "correct": [0, 2, 3],
-      "answers": ["Air Jordan", "Black Dog", "Black Cat", "His airness"]
-    },
-    {
-      "question": "What does the 'e' of e-mail stand for?",
-      "caption": "The answer should be written in lowercase",
-      "type": "input",
-      "correct": "electronic"
-    },
-    {
-      "question": "What animal is called 'the ship of the desert'?",
-
-      "correct": 2,
-      "answers": ["Snake", "Coyote", "Camel", "Turtle", "Fox"]
-    },
-    {
-      "question": "What dogs are white with black spots all over them?",
-
-      "correct": 1,
-      "answers": ["Huskies", "Dalmatians", "Sheep dog", "Alsations"]
-    },
-    {
-      "question": "What does WWW stand for?",
-
-      "correct": 2,
+      "question": "In which season were the most games played?",
       "answers": [
-        "Widened Web World",
-        "Wireless Wide Web",
-        "World Wide Web",
-        "Window Web World"
+        { "option": "2014", "correct": false },
+        { "option": "2012", "correct": false },
+        { "option": "2013", "correct": true },
+        { "option": "2008", "correct": false }
       ]
     },
     {
-      "question": "The name of which shampoo brand is made up of two different parts of the body?",
-
-      "correct": 1,
-      "answers": ["Herbal Essence", "Head & Shoulders", "Schauma", "Pantene"]
-    },
-    {
-      "question": "What does the 'Big Bang Theory' deal with?",
-
-      "correct": 3,
-      "answers": ["Medicine", "Human Body", "Music", "Universe"]
-    },
-    {
-      "question": "What word completes the following idiom. 'Easier Said Than...'?",
-      "caption": "The answer should be written in lowercase",
-      "type": "input",
-      "correct": "done"
-    },
-    {
-      "question": "What does the acronym NASA stand for?",
-      "caption": "Mark all that apply",
-
-      "correct": 2,
+      "question": "Which umpire has officiated in the most matches as 1st umpire?",
       "answers": [
-        "National Army and Soldiers Administration",
-        "National Art and Sculpture Administration",
-        "National Aeronautics and Space Administration",
-        "National Airforce and Special Administration"
+        { "option": "A Nand Kishore", "correct": false },
+        { "option": "Nitin Menon", "correct": false },
+        { "option": "HDPK Dharmasena", "correct": true },
+        { "option": "KN Ananthapadmanabhan", "correct": false }
       ]
     },
     {
-      "question": "Complete the commonly used idiom. 'Better late than ...'",
-      "caption": "The answer should be written in lowercase",
-      "type": "input",
-      "correct": "never"
-    },
-    {
-      "question": "What do you want if you send an S.O.S. signal?",
-
-      "correct": 1,
-      "answers": ["Back-up", "Help", "Digital Television"]
-    },
-    {
-      "question": "What does CD stand for?",
-
-      "correct": 2,
+      "question": "Which city has hosted most number of games?",
       "answers": [
-        "Capacity Disk",
-        "Copyable Disk",
-        "Compact Disc",
-        "Circular Disk"
+        { "option": "Mumbai", "correct": true },
+        { "option": "Bangalore", "correct": false },
+        { "option": "Delhi", "correct": false },
+        { "option": "Chennai", "correct": false }
       ]
     },
     {
-      "question": "Joseph Barbera and William Hannah created which cat and mouse duo?",
-
-      "correct": 3,
+      "question": "Which team has been the hosting team most number of times?",
       "answers": [
-        "Mickey and Minnie",
-        "James and Jerry",
-        "Tom and Mickey",
-        "Tom and Jerry"
+        { "option": "Royal Challangers Bangalore", "correct": false },
+        { "option": "Mumbai Indians", "correct": true },
+        { "option": "Delhi DareDevils", "correct": false },
+        { "option": "Chennai Super Kings", "correct": false }
       ]
     },
     {
-      "question": "Which is the shortest month of the year?",
-
-      "correct": 3,
-      "answers": ["September", "May", "April", "February"]
+      "question": "Which team has been the visiting team most number of times?",
+      "answers": [
+        { "option": "Kolkata Knight Riders", "correct": false },
+        { "option": "Mumbai Indians", "correct": false },
+        { "option": "Delhi DareDevils", "correct": true },
+        { "option": "Chennai Super Kings", "correct": false }
+      ]
     },
     {
-      "question": "On which continent would you find the fewest people?",
-
-      "correct": 0,
-      "answers": ["Antarctica", "South America", "Africa", "Europe"]
+      "question": "Which team has won the toss most number of times?",
+      "answers": [
+        { "option": "Royal Challangers Bangalore", "correct": false },
+        { "option": "Mumbai Indians", "correct": true },
+        { "option": "Kolkata Knight Riders", "correct": false },
+        { "option": "Chennai Super Kings", "correct": false }
+      ]
     },
     {
-      "question": "Which Italian great mind, who made improvements to the telescope, is known as the 'father of modern science'?",
-
-      "correct": 1,
-      "answers": ["Venturi", "Galileo", "Rubia", "Galvani", "Leonardo da Vinci"]
+      "question": "Which team has been the toss most number of times?",
+      "answers": [
+        { "option": "Royal Challangers Bangalore", "correct": false },
+        { "option": "Mumbai Indians", "correct": true },
+        { "option": "Delhi DareDevils", "correct": false },
+        { "option": "Chennai Super Kings", "correct": false }
+      ]
     },
     {
-      "question": "What is the chemical symbol for 'Germanium'?",
-
-      "correct": 3,
-      "answers": ["Be", "Ae", "Ce", "Ge"]
+      "question": "Which is choosen generally from the toss winning team",
+      "answers": [
+        { "option": "Field", "correct": true },
+        { "option": "Bat", "correct": false }
+      ]
+    },
+    {
+      "question": "How many times have the match gone in super over?",
+      "answers": [
+        { "option": "10", "correct": false },
+        { "option": "5", "correct": false },
+        { "option": "7", "correct": true },
+        { "option": "9", "correct": false }
+      ]
+    },
+    {
+      "question": "How many times have the match ended with no results?",
+      "answers": [
+        { "option": "2", "correct": false },
+        { "option": "8", "correct": false },
+        { "option": "4", "correct": false },
+        { "option": "3", "correct": true }
+      ]
+    },
+    {
+      "question": "Which team has been the hosting team most number of times?",
+      "answers": [
+        { "option": "Royal Challangers Bangalore", "correct": false },
+        { "option": "Mumbai Indians", "correct": true },
+        { "option": "Delhi DareDevils", "correct": false },
+        { "option": "Chennai Super Kings", "correct": false }
+      ]
+    },
+    {
+      "question": "Which team has won matches most number of times?",
+      "answers": [
+        { "option": "Royal Challangers Bangalore", "correct": false },
+        { "option": "Delhi DareDevils", "correct": false },
+        { "option": "Mumbai Indians", "correct": true },
+        { "option": "Chennai Super Kings", "correct": false }
+      ]
+    },
+    {
+      "question": "Which team has won matches second most number of times?",
+      "answers": [
+        { "option": "Royal Challangers Bangalore", "correct": false },
+        { "option": "Delhi DareDevils", "correct": false },
+        { "option": "Mumbai Indians", "correct": false },
+        { "option": "Chennai Super Kings", "correct": true }
+      ]
+    },
+    {
+      "question": "How many times have the team won by batting first?",
+      "answers": [
+        { "option": "165", "correct": false },
+        { "option": "221", "correct": false },
+        { "option": "277", "correct": true },
+        { "option": "312", "correct": false }
+      ]
+    },
+    {
+      "question": "How many times have the team won by bowling first?",
+      "answers": [
+        { "option": "329", "correct": true },
+        { "option": "241", "correct": false },
+        { "option": "377", "correct": false },
+        { "option": "312", "correct": false }
+      ]
+    },
+    {
+      "question": "Which stadium has hosted the most matches?",
+      "answers": [
+        { "option": "Punjab Cricket Association IS Bindra Stadium, Mohali", "correct": false },
+        { "option": "Maharashtra Cricket Association Stadium", "correct": false },
+        { "option": "Wankhede Stadium", "correct": false },
+        { "option": "M Chinnaswamy Stadium", "correct": true }
+      ]
+    },
+    {
+      "question": "What is the total number of matches played in IPL?",
+      "answers": [
+        { "option": "626", "correct": false },
+        { "option": "616", "correct": false },
+        { "option": "606", "correct": false },
+        { "option": "636", "correct": true }
+      ]
+    },
+    {
+      "question": "Which city has hosted the fewest matches?",
+      "answers": [
+        { "option": "Bloemfontein", "correct": true },
+        { "option": "Johannesburg", "correct": false },
+        { "option": "Kimberley", "correct": false },
+        { "option": "East London", "correct": false }
+      ]
+    },
+    {
+      "question": "How many different cities have hosted an IPL match?",
+      "answers": [
+        { "option": "32", "correct": false },
+        { "option": "30", "correct": false },
+        { "option": "35", "correct": false },
+        { "option": "31", "correct": true }
+      ]
+    },
+    {
+      "question": "How many different teams have participated in IPL?",
+      "answers": [
+        { "option": "18", "correct": false },
+        { "option": "10", "correct": false },
+        { "option": "13", "correct": false },
+        { "option": "15", "correct": true }
+      ]
     }
   ]
 }
