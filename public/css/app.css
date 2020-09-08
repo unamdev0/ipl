@@ -107,3 +107,14 @@ li:hover {
   background-color: #5da2db;
   justify-content: center;
 }
+
+.nav-button{
+  position: fixed;
+  color:white;
+  background-color:black;
+  font-size: 25px;
+  width:35px;
+  border:2px solid black;
+  font-weight: 500;
+  border-right:5px;
+}
