@@ -12,7 +12,7 @@
           <ul>
             <li
               v-for="ans in questions[questionIndex].answers"
-              :key="ans"
+              :key="ans.option"
               @click="selectComponent(ans,$event)"
             >{{ans.option}}</li>
           </ul>

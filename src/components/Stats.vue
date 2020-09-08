@@ -12,7 +12,6 @@
 
 
 <script>
-// import Quiz from './components/Quiz'
 import json from "../assets/stat.json";
 import LineChart from "./charts/HorizontalLine";
 import BarChart from "./charts/Bar";
