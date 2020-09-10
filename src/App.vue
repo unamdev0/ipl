@@ -22,7 +22,7 @@ export default {
   },
    data(){
     return{
-      currPage:'IPL Stats'
+      currPage:'IPL Quiz'
     }
   },
   methods:{

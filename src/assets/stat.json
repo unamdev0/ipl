@@ -26,8 +26,9 @@
                 60,
                 59
             ],
-            "xLabel": "season",
-            "yLabel": "No. of Matches"
+            "xLabel": "Season",
+            "yLabel": "No. of Matches",
+            "title":"Matches Per Season"
         },
         {
             "xAxis": [
@@ -96,7 +97,8 @@
             ],
             "yLabel": "City",
             "xLabel": "No. of Matches",
-            "Line":true
+            "Line":true,
+            "title":"Match Hosting City"
         },
         {
             "xAxis": [
@@ -131,9 +133,10 @@
                 "7",
                 "7"
             ],
-            "xLabel": "Hosting Team",
+            "xLabel": "Team",
             "yLabel": "No. of Matches",
-            "Bar":true
+            "Bar":true,
+            "title":"Hosting Team in Matches"
         },
         {
             "xAxis": [
@@ -168,9 +171,10 @@
                 "7",
                 "7"
             ],
-            "xLabel": "Visiting Team",
+            "xLabel": "Team",
             "yLabel": "No. of Matches",
-            "Bar":true
+            "Bar":true,
+            "title":"Visiting team in Matches"
         },
         {
             "xAxis": [
@@ -347,9 +351,10 @@
                 "7",
                 "8"
             ],
-            "xLabel": "Win by runs",
+            "xLabel": "Runs",
             "yLabel": "No. of Matches",
-            "Pie":true
+            "Pie":true,
+            "title":"Matches won by runs"
         },
         {
             "xAxis": [
@@ -384,9 +389,10 @@
                 "7",
                 "6"
             ],
-            "xLabel": "Toss winning team",
+            "xLabel": "Team",
             "yLabel": "No. of Matches",
-            "Bar":true
+            "Bar":true,
+            "title":"Toss winning team"
         },
         {
             "xAxis": [
@@ -421,9 +427,10 @@
                 "6",
                 "5"
             ],
-            "xLabel": "Match Winning Team",
+            "xLabel": "Team",
             "yLabel": "No. of Matches",
-            "Bar":true
+            "Bar":true,
+            "title":"Match Winning Team"
         },
         {
             "xAxis": [
@@ -450,9 +457,10 @@
                 "4",
                 "1"
             ],
-            "xLabel": "Win by wickets",
+            "xLabel": "Wickets",
             "yLabel": "No. of Matches",
-            "Bar":true
+            "Bar":true,
+            "title":"Matches won by wickets"
         },
         {
             "xAxis": [
@@ -861,9 +869,10 @@
                 "1",
                 "1"
             ],
-            "xLabel": "Man of the Match",
+            "xLabel": "Player",
             "yLabel": "No. of Matches",
-            "Pie":true
+            "Pie":true,
+            "title":"Man of the match winner"
         },
         {
             "xAxis": [
@@ -944,7 +953,8 @@
             ],
             "xLabel": "Venue",
             "yLabel": "No. of Matches",
-            "Pie":true
+            "Pie":true,
+            "title":"Venue For Matches"
         },
         {
             "xAxis": [
@@ -1039,9 +1049,10 @@
                 "1",
                 "1"
             ],
-            "yLabel": "Primary Umpire",
+            "yLabel": "Umpire",
             "xLabel": "No. of Matches",
-            "Line":true
+            "Line":true,
+            "title":"Primary Umpire in Matches"
         },
         {
             "xAxis": [
@@ -1138,9 +1149,10 @@
                 "1",
                 "1"
             ],
-            "yLabel": "Secondary Umpire",
+            "yLabel": "Umpire",
             "xLabel": "No. of Matches",
-            "Line":true
+            "Line":true,
+            "title":"Secondary Umpire in Matches"
         }
     ]
 }

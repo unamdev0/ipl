@@ -99,7 +99,7 @@ export default {
       this.chart.datasets[0].backgroundColor = this.getRandomColor();
       this.options.scales.xAxes[0].display = true;
       this.options.scales.yAxes[0].display = true;
-      this.options.title.display = false;
+      this.options.title.text = this.stats[this.counter].title;
       this.options.scales.xAxes[0].scaleLabel.labelString = this.stats[
         this.counter
       ].xLabel;
@@ -121,9 +121,9 @@ export default {
         this.options.scales.yAxes[0].display = false;
         this.options.title.display = true;
         if (this.stats[this.counter].Line == true) {
-          this.options.title.text = this.stats[this.counter].yLabel;
+          this.options.title.text = this.stats[this.counter].title;
         } else {
-          this.options.title.text = this.stats[this.counter].xLabel;
+          this.options.title.text = this.stats[this.counter].title;
         }
       }
     },
@@ -141,16 +141,17 @@ export default {
     },
   },
   mounted() {
-    if (localStorage.getItem('stat')) {
-      this.stats = JSON.parse(localStorage.getItem('stat'))
+    if (localStorage.getItem("stat")) {
+      this.stats = JSON.parse(localStorage.getItem("stat"));
+      this.nextStat();
     } else {
       json().then((data) => {
-        this.stats= data.data;
-        console.log(this.stats)
-        localStorage.setItem('stat',JSON.stringify(data.data))
+        this.stats = data.data;
+        localStorage.setItem("stat", JSON.stringify(data.data));
+        this.nextStat();
       });
-      }
-    this.nextStat()
+    }
+
     window.addEventListener("resize", this.prep);
   },
   beforeDestroy() {
@@ -167,6 +168,8 @@ export default {
   left: 0;
   z-index: -1;
   cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none; 
 
   background-color: #68d4a7e7;
 }
@@ -178,6 +181,8 @@ export default {
   z-index: -1;
   background-color: #68d4a7e7;
   cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 .left:hover {

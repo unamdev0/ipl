@@ -47,7 +47,7 @@ export default {
   data() {
     return {
       questions: null,
-      questionIndex: Math.floor(Math.random() * 15),
+      questionIndex: Math.floor(Math.random() * 30),
       component: null,
       selected: false,
       marks: 0,

@@ -64,12 +64,12 @@
       ]
     },
     {
-      "question": "Which team has been the toss most number of times?",
+      "question": "Which team has been the toss least number of times?",
       "answers": [
-        { "option": "Royal Challangers Bangalore", "correct": false },
-        { "option": "Mumbai Indians", "correct": true },
-        { "option": "Delhi DareDevils", "correct": false },
-        { "option": "Chennai Super Kings", "correct": false }
+        { "option": "Gujrat Lions", "correct": false },
+        { "option": "Kochi Tuskers Kerala", "correct": false },
+        { "option": "Pune Warriors", "correct": false },
+        { "option": "Rising Pune Supergiant", "correct": true }
       ]
     },
     {
@@ -143,6 +143,15 @@
       ]
     },
     {
+      "question": "Which Indian player has won the most man of the match awards ?",
+      "answers": [
+        { "option": "Yusuf Pathan", "correct": true },
+        { "option": "MS Dhoni", "correct": false },
+        { "option": "SK Raina", "correct": false },
+        { "option": "V Kohli", "correct": false }
+      ]
+    },
+    {
       "question": "Which stadium has hosted the most matches?",
       "answers": [
         { "option": "Punjab Cricket Association IS Bindra Stadium, Mohali", "correct": false },
@@ -185,6 +194,88 @@
         { "option": "10", "correct": false },
         { "option": "13", "correct": false },
         { "option": "15", "correct": true }
+      ]
+    },
+    {
+      "question": "In how many seasons have more than 70 matches played?",
+      "answers": [
+        { "option": "3", "correct": true },
+        { "option": "4", "correct": false },
+        { "option": "1", "correct": false },
+        { "option": "2", "correct": false }
+      ]
+    },
+    {
+      "question": "In which season were the least matches played?",
+      "answers": [
+        { "option": "2009", "correct": true },
+        { "option": "2013", "correct": false },
+        { "option": "2011", "correct": false },
+        { "option": "2016", "correct": false }
+      ]
+    },
+    {
+      "question": "Which Indian city has hosted the least number of IPL matches?",
+      "answers": [
+        { "option": "Kanpur", "correct": false },
+        { "option": "Indore", "correct": false },
+        { "option": "Nagpur", "correct": true },
+        { "option": "Rajkot", "correct": false }
+      ]
+    },
+    {
+      "question": "Which team has been the hosting team least number of times?",
+      "answers": [
+        { "option": "Gujrat Lions", "correct": false },
+        { "option": "Kochi Tuskers Kerala", "correct": false },
+        { "option": "Pune Warriors", "correct": false },
+        { "option": "Rising Pune Supergiants", "correct": true }
+      ]
+    },
+    {
+      "question": "Which team has been the hosting team least number of times?",
+      "answers": [
+        { "option": "Gujrat Lions", "correct": false },
+        { "option": "Kochi Tuskers Kerala", "correct": false },
+        { "option": "Pune Warriors", "correct": false },
+        { "option": "Rising Pune Supergiants", "correct": true }
+      ]
+    },
+    {
+      "question": "How many times has the match been won by a single run?",
+      "answers": [
+        { "option": "10", "correct": false },
+        { "option": "5", "correct": false },
+        { "option": "8", "correct": true },
+        { "option": "6", "correct": false }
+      ]
+    },
+    {
+      "question": "Which team has won the least number of matches?",
+      "answers": [
+        { "option": "Gujrat Lions", "correct": false },
+        { "option": "Rising Pune Supergiants", "correct": true },
+        { "option": "Kochi Tuskers Kerala", "correct": false },
+        { "option": "Pune Warriors", "correct": false }
+       
+      ]
+    },
+    {
+      "question": "How many times has the match been won by a single wicket?",
+      "answers": [
+        { "option": "1", "correct": true },
+        { "option": "5", "correct": false },
+        { "option": "8", "correct": false },
+        { "option": "6", "correct": false }
+      ]
+    },
+    {
+      "question": "How many times has the match been won by a ten wicket?",
+      "answers": [
+        { "option": "10", "correct": true },
+        { "option": "5", "correct": false },
+        { "option": "2", "correct": false },
+        { "option": "6", "correct": false }
       ]
     }
   ]
