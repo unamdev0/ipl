@@ -2,12 +2,10 @@
   <div>
     <div id="mySidenav" class="sidenav">
       <p class="closebtn" @click="closeNav()">&times;</p>
-      <p v-on:click="$emit('increment','stat')">Stats
-      </p>
-      <p v-on:click="$emit('increment','quiz')" >Quiz
-      </p>
+      <p v-on:click="closeNav();$emit('change','IPL Stats')">Stats</p>
+      <p v-on:click="closeNav();$emit('change','IPL Quiz')">Quiz</p>
     </div>
-    <p class="opener" @click="openNav()">≡</p>
+    <span class="opener" @click="openNav()">≡  <p style="font-size:30px;display:inline">{{curr}}</p></span>
   </div>
 </template>
 
@@ -15,6 +13,7 @@
 <script>
 export default {
   name: "SideNav",
+  props:["curr"],
   methods: {
     openNav() {
       document.getElementById("mySidenav").style.width = "250px";
@@ -30,17 +29,16 @@ export default {
 <style scoped>
 .sidenav {
   height: 100%;
-  width: 0; 
-  position: fixed; 
-  z-index: 5; 
+  width: 0;
+  position: fixed;
+  z-index: 5;
   top: 0;
   left: 0;
-  background-color: #111; 
-  overflow-x: hidden; 
-  padding-top: 60px; 
-  transition: 0.5s; 
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
 }
-
 
 .sidenav p {
   padding: 8px 8px 8px 32px;
@@ -50,7 +48,6 @@ export default {
   display: block;
   transition: 0.3s;
 }
-
 
 .sidenav p {
   color: #f1f1f1;
@@ -69,9 +66,10 @@ export default {
   padding: 20px;
 }
 
-.opener{
-  
+.opener {
+  position: absolute;
   font-size: 50px;
+  display: inline;
 }
 
 @media screen and (max-height: 450px) {

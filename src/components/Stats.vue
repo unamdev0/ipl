@@ -1,21 +1,22 @@
 <template>
-  <div class="div">
-    <div class="left" @click="prevStat()"></div>
-    <div class="container" :key="counter">
-      <BarChart v-if="this.curr==`Bar`" :chartdata="chart" :options="options" />
-      <LineChart v-if="this.curr=='Line'" :chartdata="chart" :options="options" />
-      <PieChart v-if="this.curr=='Pie'" :chartdata="chart" :options="options" />
+  <div class="container">
+    <div class="left" title="Click to go to previous stat" @click="prevStat()"></div>
+    <div class="main-container" style="z-index: 3;padding: 15px;" :key="counter">
+      <BarChart v-if="this.curr == 'Bar'" :chartdata="chart" :options="options" />
+      <LineChart v-if="this.curr == 'Line'" :chartdata="chart" :options="options" />
+      <PieChart v-if="this.curr == 'Pie'" :chartdata="chart" :options="options" />
     </div>
-    <div class="right" @click="nextStat()"></div>
+    <div class="right" title="Click to go to next stat" @click="nextStat()"></div>
   </div>
 </template>
 
-
 <script>
-import json from "../assets/stat.json";
-import LineChart from "./charts/HorizontalLine";
-import BarChart from "./charts/Bar";
-import PieChart from "./charts/Pie";
+const json = () => import("../assets/stat.json");
+
+const LineChart = () => import("./charts/HorizontalLine");
+const PieChart = () => import("./charts/Pie");
+const BarChart = () => import("./charts/Bar");
+
 export default {
   name: "Stats",
   components: {
@@ -25,7 +26,7 @@ export default {
   },
   data() {
     return {
-      stats: json.data,
+      stats: null,
       chart: {
         labels: null,
         datasets: [
@@ -98,16 +99,16 @@ export default {
       this.chart.datasets[0].backgroundColor = this.getRandomColor();
       this.options.scales.xAxes[0].display = true;
       this.options.scales.yAxes[0].display = true;
-      this.options.title.display=false;
+      this.options.title.display = false;
       this.options.scales.xAxes[0].scaleLabel.labelString = this.stats[
         this.counter
       ].xLabel;
       this.options.scales.yAxes[0].scaleLabel.labelString = this.stats[
         this.counter
       ].yLabel;
-      if (this.stats[this.counter].Bar) {
+      if (this.stats[this.counter].Bar && window.innerWidth > 900) {
         this.curr = "Bar";
-      } else if (this.stats[this.counter].Line) {
+      } else if (this.stats[this.counter].Line && window.innerWidth > 1000) {
         this.curr = "Line";
       } else {
         this.curr = "Pie";
@@ -118,8 +119,12 @@ export default {
         this.chart.datasets[0].backgroundColor = colors;
         this.options.scales.xAxes[0].display = false;
         this.options.scales.yAxes[0].display = false;
-        this.options.title.display=true;
-        this.options.title.text=this.stats[this.counter].xLabel
+        this.options.title.display = true;
+        if (this.stats[this.counter].Line == true) {
+          this.options.title.text = this.stats[this.counter].yLabel;
+        } else {
+          this.options.title.text = this.stats[this.counter].xLabel;
+        }
       }
     },
     nextStat() {
@@ -135,48 +140,51 @@ export default {
       }
     },
   },
-  created() {
-    this.nextStat();
+  mounted() {
+    if (localStorage.getItem('stat')) {
+      this.stats = JSON.parse(localStorage.getItem('stat'))
+    } else {
+      json().then((data) => {
+        this.stats= data.data;
+        console.log(this.stats)
+        localStorage.setItem('stat',JSON.stringify(data.data))
+      });
+      }
+    this.nextStat()
+    window.addEventListener("resize", this.prep);
+  },
+  beforeDestroy() {
+    window.addEventListener("resize", this.prep);
   },
 };
 </script>
 
 <style scoped>
-.div {
-  display: flex;
-
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-}
-
-.container {
-  width: 40%;
-  height: 85%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  flex-flow: column;
-  text-align: center;
-
-  border-radius: 10px;
-  z-index: 3;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-
 .left {
   position: fixed;
   width: 50%;
   height: 100%;
-  z-index: 2;
   left: 0;
+  z-index: -1;
+  cursor: pointer;
+
+  background-color: #68d4a7e7;
 }
 .right {
   position: fixed;
   width: 50%;
   left: 50%;
   height: 100%;
-  z-index: 2;
+  z-index: -1;
+  background-color: #68d4a7e7;
+  cursor: pointer;
+}
+
+.left:hover {
+  background-color: #4f8b72e7;
+}
+
+.right:hover {
+  background-color: #4f8b72e7;
 }
 </style>

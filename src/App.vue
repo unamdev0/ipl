@@ -1,15 +1,17 @@
 <template>
 <div>
-  <SideNav v-on:increment="update($event)"/>
-  <Quiz v-show="currPage=='quiz'"/>
-  <Stats v-if="currPage=='stat'"/>
+  <SideNav :curr="currPage" v-on:change="update($event)"/>
+  <keep-alive>
+  <Quiz  v-if="currPage=='IPL Quiz'"/>
+  <Stats v-if="currPage=='IPL Stats'"/>
+  </keep-alive>
   </div>
 </template>
 
 
 <script>
-import Quiz from './components/Quiz'
-import Stats from "./components/Stats";
+const Quiz = () => import('./components/Quiz')
+const Stats = () => import('./components/Stats')
 import SideNav from './components/SideNav'
 export default {
   name: "App",
@@ -20,7 +22,7 @@ export default {
   },
    data(){
     return{
-      currPage:'quiz'
+      currPage:'IPL Stats'
     }
   },
   methods:{
