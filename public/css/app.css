@@ -34,7 +34,7 @@
   .main-container{
     width: 80%;
     margin:15px; 
-    height: 55%; 
+    height: 75%; 
     margin-top: 70px;
   }
   @media only screen and (max-height:611px) {

@@ -47,7 +47,7 @@ export default {
   data() {
     return {
       questions: null,
-      questionIndex: Math.floor(Math.random() * 30),
+      questionIndex: null,
       component: null,
       selected: false,
       marks: 0,
@@ -68,16 +68,19 @@ export default {
       if (this.counter >= 10) {
         this.finishQuiz();
       }
-      (this.questionIndex = Math.floor(Math.random() * 19)),
+      (this.questionIndex = Math.floor(Math.random() * (this.questions.length))),
         (this.counter += 1);
-      if (this.component != null && this.component.correct) {
+      if (this.component != null && this.component.correct==true) {
         this.marks += 1;
       }
       this.component = null;
+      if (this.selected) {
+        this.selected.classList.remove("select");
+      }
     },
     finishQuiz() {
       this.show_marks = true;
-      if (this.component != null && this.component.correct) {
+      if (this.component != null && this.component.correct==true) {
         this.marks += 1;
       }
       this.component = null;
@@ -94,10 +97,13 @@ export default {
   mounted() {
     if (localStorage.getItem("quiz")) {
       this.questions = JSON.parse(localStorage.getItem("quiz"));
+      this.questionIndex=Math.floor(Math.random() * (this.questions.length))
     } else {
       json().then((data) => {
         this.questions = data.questions;
         localStorage.setItem("quiz", JSON.stringify(data.questions));
+        this.questionIndex=Math.floor(Math.random() * (this.questions.length))
+
       });
     }
   },
@@ -189,7 +195,7 @@ li:hover {
 @media only screen and (max-width: 710px) {
   /* For mobile phones: */
   .quiz-header h1 {
-    font-size: 15px;
+    font-size: 20px;
   }
   .quiz-main h1 {
     font-size: 10px;
@@ -199,7 +205,7 @@ li:hover {
     font-size: 10px;
   }
   .quiz-footer button {
-    font-size: 10px;
+    font-size: 15px;
     width: 60px;
     height: 25px;
     border-radius: 3px;
